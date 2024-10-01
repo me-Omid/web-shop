@@ -1,0 +1,31 @@
+html{
+    font-family: "Comic Neue", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+body{
+    margin: 0;
+}
+header{
+
+    padding-left: 5dvw;  padding-right: 1dvw;
+    width: 94dvw; height: 7dvh; background-color: rgb(198, 255, 191);
+    display: flex; justify-content: space-between; align-items: center;
+}
+.link{
+    text-decoration: none; color: black; font-size: large;
+    margin-right: 5dvw;
+}
+#suche{
+    width: 15dvw; height: 5dvh;
+    border: none; padding-left: 1dvw; 
+    border-bottom: 2px solid rgb(138, 255, 127);
+    background-color: transparent;
+    outline: none;
+}
+#profile{
+    width: 3dvw; height: 3dvw; background-color: red;
+    border-radius: 50%;
+    background-position: center; background-image: url(../Bilder/naruto.webp);
+    background-size: cover;
+}
