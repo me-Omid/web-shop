@@ -18,7 +18,7 @@ header{
 }
 #suche{
     width: 15dvw; height: 5dvh;
-    border: none; padding-left: 1dvw; 
+    border: none; padding-left: 1dvw; margin-right: 2dvw; 
     border-bottom: 2px solid rgb(138, 255, 127);
     background-color: transparent;
     outline: none;
