@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+#main{
+    display: flex; justify-content: center;
+    width: 100dvw; height: 100dvh; margin: 0; padding: 0;
+}
+#head{
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100dvw; height: 7dvh; margin: 0; padding: 0; background-color: #d9ed5a;
+}
+#pf{
+    border-radius: 50%;
+    width: 6dvh; height: 6vh; background-color: red;
+    background-image: url(../Bilder/naruto.webp); background-size: cover;
+}
+form{
+    display: flex; justify-content: center;
+    height: 5dvh;
+}
+#suche{
+    width: 20dvw;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 1dvw;
+
+}
+#submit{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+main{
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    width: 100dvw; height: 93dvh; background-color: red;
+}
+#produkt{
+    margin: 2dvw;
+    width: 25dvw; height: 30dvh; background-color: #4CAF50;
+}
