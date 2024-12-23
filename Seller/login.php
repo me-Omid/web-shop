@@ -11,6 +11,8 @@
         $mail = $_POST["mail"];
         $pass = $_POST["password"];
 
+
+
         if($mail == null or $pass == null){
             header("Location: ./index.php");
             echo("Eingabe ist nicht leer");

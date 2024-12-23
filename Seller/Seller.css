@@ -1,7 +1,7 @@
 body{
     margin: 0;
 }
-#main{
+#main{ background-color: #4CAF50;
     display: flex; justify-content: center;
     width: 100dvw; height: 100dvh; margin: 0; padding: 0;
 }
@@ -13,7 +13,12 @@ body{
     display: flex; justify-content: center; align-items: center;
     width: auto; height: 6vh; margin-right: 1dvw;
 }
-form{
+#add{
+    display: flex; justify-content: center; align-items: center;
+    width: auto; height: 5vh; margin-left: 1dvw; width: 5dvh; background-image: url(./Seller_icon/plus.png);
+    background-position: center; background-size: cover;
+}
+#sucheform{
     display: flex; justify-content: center;
     height: 5dvh;
 }
@@ -37,11 +42,16 @@ form{
 }
 
 main{
-    display: flex; justify-content: space-around; flex-wrap: wrap;
-    width: 100dvw; height: 93dvh;
+    display: flex; justify-content: flex-start; flex-wrap: wrap;
+    height: auto; width: auto;
 }
 #produkt{
     margin: 2dvw;
     width: 25dvw; height: 30dvh; 
     border: solid black 1px;
+}
+
+#add_bar{
+    position: absolute; top: 0; left: 0;
+    width: 30dvw; height: 100dvh; background-color: red;
 }

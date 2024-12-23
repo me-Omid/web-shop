@@ -6,6 +6,10 @@
     <title>LOGIN</title>
 </head>
 <body>
+    <?php
+        session_start();
+        $_SESSION["Seller_ID"] = "0";
+    ?>
     <form action="login.php" method="post">
         <input type="email" name="mail" id="">
         <input type="password" name="password" id="">

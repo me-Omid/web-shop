@@ -35,16 +35,26 @@
     ?>
 
     <header id="head">
-        <div></div>
-        <form action="">
-            <input id="suche" type="text" value="">
+        <div id="add"></div>
+        <form id="sucheform" action="" method = "get">
+            <input id="suche" type="text" name = "suche">
             <input id="submit" type="submit" value="Suchen">
         </form>
-        <div id="pf"><?php echo($row["Name"]); ?> </div>
+        <div id="pf"><?php echo ("<h1>".$row["Name"]. "</h1>"); ?> </div>
+
+
     </header>
     <main>
 
         <?php
+
+            if(!empty($_GET["suche"])){
+                $suchinhalt = $_GET["suche"];
+                if($suchinhalt != null){
+                    $sql2 = "SELECT * FROM produkt where FK_Seller_ID = '$seller_ID' and Name Like '%$suchinhalt%';";
+                }
+            }
+
             $result = $conn->query($sql2); // SQL-Abfrage ausführen
             if($result->num_rows > 0){
                 $anzahl_produkte = $result->num_rows;
@@ -56,21 +66,39 @@
 
                     // Sehr Unverständlich
                     echo(
-                        "<div style='margin: 2dvw; width: 25dvw; height: 30dvh;border: solid black 1px;'>".
+                        "<div id='gg' style='margin: 2dvw; width: 25dvw; height: 30dvh;border: solid black 1px;'>".
                             "<div style='width:100%; height: 80%; background-color:red;
                             background-image: url(../Bilder/Produkt_Bilder/$bild_pfad)'>".
                             
                             "</div>".
-                        $row["Name"]
+
+                            "<div style='width:100%; height: 20%;display: flex; justify-content: Space-between; align-items: center; )'>".
+                                "<div>" .
+                                    "Name:" .$row["Name"] . "<br/>" . "Lagerbestand:" .$row["Lagerbestand"].
+                                 "</div>".
+
+                                 "<a href='remove.php?id=" . $row['PK_Produkt_ID'] . "'
+                                  style='width: 11%; height: 90%; background-image: url(./Seller_icon/trash.png ); background-size: cover; background-position: center;'>" .
+                                 
+                                "</a>". 
+                            "</div>"
                         ."</div>"
                     );
-
                 }
-                
-
             }
-
         ?>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let add = document.getElementById('add');
+
+            // Klick-Event hinzufügen
+            add.addEventListener('click', function () {
+                window.location.href = './add.php';
+            });
+        });
+
+    </script>
 </body>
 </html>
