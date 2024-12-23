@@ -6,8 +6,9 @@
     <title>LOGIN</title>
 </head>
 <body>
-    <form action="">
-        <input type="text">
+    <form action="login.php" method="post">
+        <input type="email" name="mail" id="">
+        <input type="password" name="password" id="">
         <input type="submit" value="LOGIN">
     </form>
     

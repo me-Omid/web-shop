@@ -7,12 +7,11 @@ body{
 }
 #head{
     display: flex; justify-content: space-between; align-items: center;
-    width: 100dvw; height: 7dvh; margin: 0; padding: 0; background-color: #d9ed5a;
+    width: 100dvw; height: 7dvh; margin: 0; padding: 0; 
 }
 #pf{
-    border-radius: 50%;
-    width: 6dvh; height: 6vh; background-color: red;
-    background-image: url(../Bilder/naruto.webp); background-size: cover;
+    display: flex; justify-content: center; align-items: center;
+    width: auto; height: 6vh; margin-right: 1dvw;
 }
 form{
     display: flex; justify-content: center;
@@ -38,10 +37,11 @@ form{
 }
 
 main{
-    display: flex; justify-content: space-between; flex-wrap: wrap;
-    width: 100dvw; height: 93dvh; background-color: red;
+    display: flex; justify-content: space-around; flex-wrap: wrap;
+    width: 100dvw; height: 93dvh;
 }
 #produkt{
     margin: 2dvw;
-    width: 25dvw; height: 30dvh; background-color: #4CAF50;
+    width: 25dvw; height: 30dvh; 
+    border: solid black 1px;
 }
